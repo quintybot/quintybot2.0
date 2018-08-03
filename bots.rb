@@ -20,7 +20,7 @@ class MyBot < Ebooks::Bot
 
   def on_startup
     scheduler.every '1h' do
-      model = Ebooks::Model.load("model/cubanfionaapple.model")  
+      model = Ebooks::Model.load("model/cath0lic_guilt.model")  
       tweet(model.make_statement(140))
 
     end
@@ -37,7 +37,7 @@ class MyBot < Ebooks::Bot
   end
 
   def on_mention(tweet)
-    model = Ebooks::Model.load("model/cubanfionaapple.model")  
+    model = Ebooks::Model.load("model/cath0lic_guilt.model")  
     reply(tweet, model.make_statement(140))
   end
 
